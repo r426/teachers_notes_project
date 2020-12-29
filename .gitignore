@@ -3,5 +3,3 @@
 *.pyc
 .env
 __pycache__/
-media
-static
