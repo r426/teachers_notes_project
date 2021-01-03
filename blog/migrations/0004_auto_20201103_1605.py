@@ -13,16 +13,16 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='grade2blogpost',
             name='file',
-            field=models.FileField(default='blog/lessonplans/empty.pdf', upload_to='blog/lessonplans/'),
+            field=models.FileField(default='blog/downloads/empty.pdf', upload_to='blog/downloads/'),
         ),
         migrations.AddField(
             model_name='grade3blogpost',
             name='file',
-            field=models.FileField(default='blog/lessonplans/empty.pdf', upload_to='blog/lessonplans/'),
+            field=models.FileField(default='blog/downloads/empty.pdf', upload_to='blog/downloads/'),
         ),
         migrations.AddField(
             model_name='grade4blogpost',
             name='file',
-            field=models.FileField(default='blog/lessonplans/empty.pdf', upload_to='blog/lessonplans/'),
+            field=models.FileField(default='blog/downloads/empty.pdf', upload_to='blog/downloads/'),
         ),
     ]
