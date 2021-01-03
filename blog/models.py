@@ -9,7 +9,7 @@ class Grade2blogpost(models.Model):
     description = models.TextField()
     image = models.ImageField(upload_to='blog/images/', default='blog/images/soon.png')
     file = models.FileField(upload_to='blog/lessonplans/', default='blog/lessonplans/empty.pdf')
-    imagecredits = models.TextField(max_length=400, blank='True')
+    credits = models.TextField(blank='True')
 
     def __str__(self):
         return self.title
@@ -23,7 +23,7 @@ class Grade3blogpost(models.Model):
     description = models.TextField()
     image = models.ImageField(upload_to='blog/images/', default='blog/images/soon.png')
     file = models.FileField(upload_to='blog/lessonplans/', default='blog/lessonplans/empty.pdf')
-    imagecredits = models.TextField(max_length=400, blank='True')
+    credits = models.TextField(blank='True')
 
     def __str__(self):
         return self.title
@@ -37,7 +37,7 @@ class Grade4blogpost(models.Model):
     description = models.TextField()
     image = models.ImageField(upload_to='blog/images/', default='blog/images/soon.png')
     file = models.FileField(upload_to='blog/lessonplans/', default='blog/lessonplans/empty.pdf')
-    imagecredits = models.TextField(max_length=400, blank='True')
+    credits = models.TextField(blank='True')
 
     def __str__(self):
         return self.title
