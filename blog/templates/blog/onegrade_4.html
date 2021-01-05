@@ -24,7 +24,7 @@
             <a class="button" href="{% url 'blog:url_one_grade4' blogpost.id %}">
                 <h4>{{ blogpost.date|date:'jS F Y' }}</h4>
                 <h4>{{ blogpost.title }}</h4>
-                <p>{{ blogpost.intro|safe|truncatewords:10 }}</p></a>
+                <p>{{ blogpost.intro|safe|truncatewords:20 }}</p></a>
         {% endfor %}
     </div>
 </section>
