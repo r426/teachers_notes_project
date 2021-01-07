@@ -82,6 +82,7 @@ a {
     -ms-flex-pack: distribute;
     justify-content: space-around;
     padding-bottom: 5px;
+    flex-direction: row-reverse;
 }
 
 footer {
