@@ -22,20 +22,20 @@ h1, h2, h3, h4 {
 h1 {
     font-size: 56px;
     color: #F8FC03;
-    padding-top: 40px;
-    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 10px;
 }
 
 h2 {
     font-size: 28px;
     color: white;
-    padding: 12px;
+    padding: 10px;
 }
 
 h3 {
     font-size: 28px;
     color: #00868e;
-    padding: 12px;
+    padding: 10px;
 }
 
 h4 {
