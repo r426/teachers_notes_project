@@ -10,8 +10,7 @@
     <link href="{% static 'blog/all_posts.css' %}" type="text/css" rel="stylesheet"/>
     <link href="{% static 'blog/queries.css' %}" type="text/css" rel="stylesheet"/>
     <link rel="shortcut icon" type="image/png" href="{% static 'blog/favicon.ico' %}"/>
-    <script type="module" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
+
 </head>
 
 <header>
@@ -55,15 +54,9 @@
     </div>
 </section>
 
-<footer>
-    <p class="signature">With <a>
-        <ion-icon class="heart" name="heart"></ion-icon>
-    </a> Kaunas
-        <a style="text-decoration: none" href="mailto:welcome@listensingtalk.com">
-            <ion-icon class="mail" name="mail-outline"></ion-icon>
-        </a> 2021
-    </p>
-</footer>
+{% include 'blog/footer.html' %}
+
+
 
 <script src="https://cdn.jsdelivr.net/npm/respond@0.9.0/main.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
