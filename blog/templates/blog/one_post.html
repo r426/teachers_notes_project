@@ -18,8 +18,8 @@
 
 <div>
     <h4>{{ blogpost.intro | safe }}</h4>
-    <img src="/{{ blogpost.image }}" alt="{{ blogpost.title }}">
-{#    <img src="/media/{{ blogpost.image }}" alt="{{ blogpost.title }}">#}
+{#    <img src="/{{ blogpost.image }}" alt="{{ blogpost.title }}">#}
+    <img src="/media/{{ blogpost.image }}" alt="{{ blogpost.title }}">
     <p>{{ blogpost.description | safe }}</p>
     <p class="small">{{ blogpost.credits | safe }}</p>
 </div>
