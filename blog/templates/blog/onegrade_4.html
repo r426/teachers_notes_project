@@ -13,23 +13,25 @@
     <script nomodule="" src="https://unpkg.com/ionicons@5.0.0/dist/ionicons/ionicons.js"></script>
 </head>
 <body>
-<header>
-    <h1>Teacher's Notes</h1>
-    <h2>Grade 4</h2>
-</header>
-<section>
-    <h3></h3>
-    <div class="flex-container">
-        {% for blogpost in blogposts %}
-            <a class="button" href="{% url 'blog:url_one_grade4' blogpost.id %}">
-                <h4>{{ blogpost.date|date:'jS F Y' }}</h4>
-                <h5>{{ blogpost.title }}</h5>
-                <p>{{ blogpost.intro|safe|truncatewords:20 }}</p></a>
-        {% endfor %}
+<div id="page-container">
+    <div id="content-wrap">
+        <header>
+            <h1>Teacher's Notes</h1>
+            <h2>Grade 4</h2>
+        </header>
+        <section>
+            <h3></h3>
+            <div class="flex-container">
+                {% for blogpost in blogposts %}
+                    <a class="button" href="{% url 'blog:url_one_grade4' blogpost.id %}">
+                        <h4>{{ blogpost.date|date:'jS F Y' }}</h4>
+                        <h5>{{ blogpost.title }}</h5>
+                        <p>{{ blogpost.intro|safe|truncatewords:20 }}</p></a>
+                {% endfor %}
+            </div>
+        </section>
     </div>
-</section>
-
-{% include 'blog/footer.html' %}
-
+    {% include 'blog/footer.html' %}
+</div>
 </body>
 </html>
