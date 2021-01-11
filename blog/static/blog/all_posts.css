@@ -91,5 +91,5 @@ a {
 }
 
 #content-wrap {
-  padding-bottom: 30px;    /* Footer height */
+  padding-bottom: 90px;    /* Footer height + margin*/
 }
