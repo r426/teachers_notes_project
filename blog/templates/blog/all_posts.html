@@ -12,49 +12,52 @@
     <link rel="shortcut icon" type="image/png" href="{% static 'blog/favicon.ico' %}"/>
 </head>
 
-<header>
-    <h1>Teacher's Notes</h1>
-    <h2>Some links and ideas for online English lessons</h2>
-</header>
+<body>
+<div id="page-container">
+    <div id="content-wrap">
+        <header>
+            <h1>Teacher's Notes</h1>
+            <h2>Some links and ideas for online English lessons</h2>
+        </header>
 
-<section>
-    <a href="{% url 'blog:url_all_grade2' %}"><h3>Grade 2</h3></a>
-    <div class="flex-container">
-        {% for blogpost in grade2blogposts %}
-            <a class="button" href="{% url 'blog:url_one_grade2' blogpost.id %}">
-                <h4>{{ blogpost.date|date:'jS F Y' }}</h4>
-                <h5>{{ blogpost.title }}</h5>
-                <p>{{ blogpost.intro|safe|truncatewords:20 }}</p></a>
-        {% endfor %}
+        <section>
+            <a href="{% url 'blog:url_all_grade2' %}"><h3>Grade 2</h3></a>
+            <div class="flex-container">
+                {% for blogpost in grade2blogposts %}
+                    <a class="button" href="{% url 'blog:url_one_grade2' blogpost.id %}">
+                        <h4>{{ blogpost.date|date:'jS F Y' }}</h4>
+                        <h5>{{ blogpost.title }}</h5>
+                        <p>{{ blogpost.intro|safe|truncatewords:20 }}</p></a>
+                {% endfor %}
+            </div>
+        </section>
+
+        <section>
+            <a href="{% url 'blog:url_all_grade3' %}"><h3>Grade 3</h3></a>
+            <div class="flex-container">
+                {% for blogpost in grade3blogposts %}
+                    <a class="button" href="{% url 'blog:url_one_grade3' blogpost.id %}">
+                        <h4>{{ blogpost.date|date:'jS F Y' }}</h4>
+                        <h5>{{ blogpost.title }}</h5>
+                        <p>{{ blogpost.intro|safe|truncatewords:20 }}</p></a>
+                {% endfor %}
+            </div>
+        </section>
+
+        <section>
+            <a href="{% url 'blog:url_all_grade4' %}"><h3>Grade 4</h3></a>
+            <div class="flex-container">
+                {% for blogpost in grade4blogposts %}
+                    <a class="button" href="{% url 'blog:url_one_grade4' blogpost.id %}">
+                        <h4>{{ blogpost.date|date:'jS F Y' }}</h4>
+                        <h5>{{ blogpost.title }}</h5>
+                        <p>{{ blogpost.intro|safe|truncatewords:20 }}</p></a>
+                {% endfor %}
+            </div>
+        </section>
     </div>
-</section>
-
-<section>
-    <a href="{% url 'blog:url_all_grade3' %}"><h3>Grade 3</h3></a>
-    <div class="flex-container">
-        {% for blogpost in grade3blogposts %}
-            <a class="button" href="{% url 'blog:url_one_grade3' blogpost.id %}">
-                <h4>{{ blogpost.date|date:'jS F Y' }}</h4>
-                <h5>{{ blogpost.title }}</h5>
-                <p>{{ blogpost.intro|safe|truncatewords:20 }}</p></a>
-        {% endfor %}
-    </div>
-</section>
-
-<section>
-    <a href="{% url 'blog:url_all_grade4' %}"><h3>Grade 4</h3></a>
-    <div class="flex-container">
-        {% for blogpost in grade4blogposts %}
-            <a class="button" href="{% url 'blog:url_one_grade4' blogpost.id %}">
-                <h4>{{ blogpost.date|date:'jS F Y' }}</h4>
-                <h5>{{ blogpost.title }}</h5>
-                <p>{{ blogpost.intro|safe|truncatewords:20 }}</p></a>
-        {% endfor %}
-    </div>
-</section>
-
-{% include 'blog/footer.html' %}
-
+    {% include 'blog/footer.html' %}
+</div>
 <script src="https://cdn.jsdelivr.net/npm/respond@0.9.0/main.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/selectivizr@1.0.3/selectivizr.min.js"></script>

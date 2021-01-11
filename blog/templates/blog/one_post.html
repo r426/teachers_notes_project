@@ -11,20 +11,22 @@
 
 </head>
 <body>
-
-<h1>{{ blogpost.title }}</h1>
-<h2>{{ blogpost.date|date:'jS F Y' }}</h2>
-<h3>{{ blogpost.grade }}</h3>
-
-<div>
-    <h4>{{ blogpost.intro | safe }}</h4>
-{#    <img src="/{{ blogpost.image }}" alt="{{ blogpost.title }}">#}
-    <img src="/media/{{ blogpost.image }}" alt="{{ blogpost.title }}">
-    <p>{{ blogpost.description | safe }}</p>
-    <p class="small">{{ blogpost.credits | safe }}</p>
+<div id="page-container">
+    <div id="content-wrap">
+        <header>
+            <h1>{{ blogpost.title }}</h1>
+            <h2>{{ blogpost.date|date:'jS F Y' }}</h2>
+            <h3>{{ blogpost.grade }}</h3>
+        </header>
+        <div id="information">
+            <h4>{{ blogpost.intro | safe }}</h4>
+            {#    <img src="/{{ blogpost.image }}" alt="{{ blogpost.title }}">#}
+            <img src="/media/{{ blogpost.image }}" alt="{{ blogpost.title }}">
+            <p>{{ blogpost.description | safe }}</p>
+            <p class="small">{{ blogpost.credits | safe }}</p>
+        </div>
+    </div>
+    {% include 'blog/footer.html' %}
 </div>
-
-{% include 'blog/footer.html' %}
-
 </body>
 </html>
