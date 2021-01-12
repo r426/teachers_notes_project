@@ -55,6 +55,11 @@
                 {% endfor %}
             </div>
         </section>
+        <div class="flex-container three-grades">
+            <a href="{% url 'blog:url_all_grade4' %}"><h3>Grade 4</h3></a>
+            <a href="{% url 'blog:url_all_grade3' %}"><h3>Grade 3</h3></a>
+            <a href="{% url 'blog:url_all_grade2' %}"><h3>Grade 2</h3></a>
+        </div>
     </div>
     {% include 'blog/footer.html' %}
 </div>
