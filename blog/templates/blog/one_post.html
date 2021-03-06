@@ -14,7 +14,7 @@
 <div id="page-container">
     <div id="content-wrap">
         <header>
-            <h1>{{ blogpost.title }}</h1>
+            <h1>{{ blogpost.title|safe|truncatewords:20 }}</h1>
             <h2>{{ blogpost.date|date:'jS F Y' }}</h2>
             <h3>{{ blogpost.grade }}</h3>
         </header>

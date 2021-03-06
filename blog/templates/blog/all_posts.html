@@ -27,7 +27,7 @@
                 {% for blogpost in grade2blogposts %}
                     <a class="button" href="{% url 'blog:url_one_grade2' blogpost.id %}">
                         <h4>{{ blogpost.date|date:'jS F Y' }}</h4>
-                        <h5>{{ blogpost.title }}</h5>
+                        <h5>{{ blogpost.title|safe|truncatewords:20 }}</h5>
                         <p>{{ blogpost.intro|safe|truncatewords:20 }}</p></a>
                 {% endfor %}
             </div>
@@ -39,7 +39,7 @@
                 {% for blogpost in grade3blogposts %}
                     <a class="button" href="{% url 'blog:url_one_grade3' blogpost.id %}">
                         <h4>{{ blogpost.date|date:'jS F Y' }}</h4>
-                        <h5>{{ blogpost.title }}</h5>
+                        <h5>{{ blogpost.title|safe|truncatewords:20 }}</h5>
                         <p>{{ blogpost.intro|safe|truncatewords:20 }}</p></a>
                 {% endfor %}
             </div>
@@ -51,7 +51,7 @@
                 {% for blogpost in grade4blogposts %}
                     <a class="button" href="{% url 'blog:url_one_grade4' blogpost.id %}">
                         <h4>{{ blogpost.date|date:'jS F Y' }}</h4>
-                        <h5>{{ blogpost.title }}</h5>
+                        <h5>{{ blogpost.title|safe|truncatewords:20 }}</h5>
                         <p>{{ blogpost.intro|safe|truncatewords:20 }}</p></a>
                 {% endfor %}
             </div>
