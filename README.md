@@ -1,2 +1,1 @@
-# teachers_notes_project
-www.englishteachersnotes.com
+# www.englishteachersnotes.com
